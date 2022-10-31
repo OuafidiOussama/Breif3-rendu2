@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MENU</title>
+
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@400;500;600;700&family=Shadows+Into+Light&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./asset/image/Background.jfif">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <h1>
+        <a href="index.html" class="logo">Shiro's <span id="sushi">Sushi</span></a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="nav-item">
+            <a href="./index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="./Menu.html" class="navbar-link" data-nav-link>Menu</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="./About.html" class="navbar-link" data-nav-link>About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="./Contact.html" class="navbar-link" data-nav-link>Contact Us</a>
+          </li>
+
+          <div class="header-btn-group">
+            <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
+              <span class="line top"></span>
+              <span class="line middle"></span>
+              <span class="line bottom"></span>
+            </button>
+          </div>
+          
+
+        </ul>
+
+        
+      </div>
+      </nav>
+
+      
+      
+    </div>
+    <div class="cart-box">
+      <button class="btn btn-hover" id="cart">Cart</button>
+      <div class="whole-cart-window hide">
+        <h2 id="your-cart">Your Cart</h2>
+        <div class="cart-wrapper">
+        
+
+        </div>
+        <div class="total">Total: $0.00</div>
+        <div class="checkout"><button class="btn btn-hover">Checkout</button></div>
+        <div class="view-cart"><button class="btn btn-hover">View Cart</button></div>
+      </div>
+    </div>
+    </div>
+    
+  </header>
+  
+
+    <!-- 
+        - #FOOD MENU
+      -->
+
+      <section class="section food-menu" >
+        <div class="container">
+
+          <p class="section-subtitle">Menu</p>
+
+          <h2 class="h2 section-title">
+            Our Delicious <span id="span">Foods</span>
+          </h2>
+
+          <p class="section-text">
+            Food is any substance consumed to provide nutritional support for an organism.
+          </p>
+
+          <ul class="fiter-list">
+
+            <li>
+              <a href="./Menu.html"><button class="filter-btn  active" data-filter=".all">All</button></a>
+            </li>
+
+            <li>
+              <a href="./salades.html"><button class="filter-btn " data-filter=".salades">Salades</button></a>
+            </li>
+
+            <li>
+              <a href="./noodle.html"><button class="filter-btn noodles" data-filter=".noodles">Noodles</button></a>
+            </li>
+
+            <li>
+              <a href="./plates.html"><button class="filter-btn plates" data-filter=".plates">Plates</button></a>
+            </li>
+
+            <li>
+              <a href="./maki.html"><button class="filter-btn maki" data-filter=".maki">Maki</button></a>
+            </li>
+
+          </ul>
+
+          <ul class="food-menu-list">
+
+            <li>
+              <div class="food-menu-card all salades">
+
+                <div class="card-banner">
+                  <img src="./asset/image/umi.png" width="300" height="300" loading="lazy"
+                    alt="umi" class="w-200">
+
+                  <div class="badge">-15%</div>
+
+                  <button class="btn food-menu-btn">Order Now</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">UMI</p>
+                  
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">UMI SUSHI SALAD</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price">$49.00</data>
+
+                  <del class="del" value="69.00">$69.00</del>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card all salades">
+
+                <div class="card-banner">
+                  <img src="./asset/image/kani.png" width="300" height="300" loading="lazy"
+                    alt="KANI" class="w-200">
+
+                  <div class="badge">-10%</div>
+
+                  <button class="btn food-menu-btn">Order Now</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">KANI</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">KANI SUSHI SALAD</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price" value="29.00">$29.00</data>
+
+                  <del class="del">$39.00</del>
+
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card all salades">
+
+                <div class="card-banner">
+                  <img src="./asset/image/tori.png" width="300" height="300" loading="lazy"
+                    alt="tori" class="w-200">
+
+                  <div class="badge">-25%</div>
+
+                  <button class="btn food-menu-btn">Order Now</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">TORI</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">TORI SUSHI SALAD</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price" value="49.00">$49.00</data>
+
+                  <del class="del">$69.00</del>
+
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card all noodles">
+
+                <div class="card-banner">
+                  <img src="./asset/image/Ramen.png" width="300" height="300" loading="lazy"
+                    alt="Ramen" class="w-200">
+
+                  <div class="badge">-20%</div>
+
+                  <button class="btn food-menu-btn">Order Now</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">RAMEN</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">NOODLE RAMEN</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price" value="59.00 ">$59.00</data>
+
+                  <del class="del">$69.00</del>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card all noodles">
+
+                <div class="card-banner">
+                  <img src="./asset/image/udon.png" width="300" height="300" loading="lazy"
+                    alt="UDON" class="w-200">
+
+                  <div class="badge">-5%</div>
+
+                  <button class="btn food-menu-btn">Order Now</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">UDON</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">UDON NOODLE</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price" value="49.00">$49.00</data>
+
+                  <del class="del">$69.00</del>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card all noodles">
+
+                <div class="card-banner">
+                  <img src="./asset/image/Soba.png" width="300" height="300" loading="lazy"
+                    alt="SOBA" class="w-200">
+
+                  <div class="badge">-15%</div>
+
+                  <button class="btn food-menu-btn">Order Now</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">SOBA</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">SOBA NOODLE</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price" value="49.00">$49.00</data>
+
+                  <del class="del">$69.00</del>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card all plates">
+
+                <div class="card-banner">
+                  <img src="./asset/image/Sashimi.png" width="300" height="300" loading="lazy"
+                    alt="Sashimi" class="w-200">
+
+                  <div class="badge">-15%</div>
+
+                  <button class="btn food-menu-btn">Order Now</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">SASHIMI</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">PLATE SASHIMI</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price">$49.00</data>
+
+                  <del class="del" value="69.00">$69.00</del>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card all plates">
+
+                <div class="card-banner">
+                  <img src="./asset/image/tartare.png" width="300" height="300" loading="lazy"
+                    alt="TARTARE" class="w-200">
+
+                  <div class="badge">-10%</div>
+
+                  <button class="btn food-menu-btn">Order Now</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">TARTARE</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">PLATE TARTARE</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price" value="29.00">$29.00</data>
+
+                  <del class="del">$39.00</del>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card all plates">
+
+                <div class="card-banner">
+                  <img src="./asset/image/Carpaccio.png" width="300" height="300" loading="lazy"
+                    alt="CARPACCIO" class="w-200">
+
+                  <div class="badge">-25%</div>
+
+                  <button class="btn food-menu-btn">Order Now</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">CARPACCIO</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">PLATE CARPACCIO</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price" value="49.00">$49.00</data>
+
+                  <del class="del">$69.00</del>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card all maki">
+
+                <div class="card-banner">
+                  <img src="./asset/image/saumon.png" width="300" height="300" loading="lazy"
+                    alt="saumon" class="w-200">
+
+                  <div class="badge">-20%</div>
+
+                  <button class="btn food-menu-btn">Order Now</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">SAUMON</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">SAUMON SUSHI</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price" value="59.00 ">$59.00</data>
+
+                  <del class="del">$69.00</del>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card all maki">
+
+                <div class="card-banner">
+                  <img src="./asset/image/crevette.png" width="300" height="300" loading="lazy"
+                    alt="CREVETTE" class="w-200">
+
+                  <div class="badge">-5%</div>
+
+                  <button class="btn food-menu-btn">Order Now</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">CREVETTE</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">CREVETTE SUSHI</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price" value="49.00">$49.00</data>
+
+                  <del class="del">$69.00</del>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card all maki">
+
+                <div class="card-banner">
+                  <img src="./asset/image/surimi.png" width="300" height="300" loading="lazy"
+                    alt="SURIMI" class="w-200">
+
+                  <div class="badge">-15%</div>
+
+                  <button class="btn food-menu-btn">Order Now</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">SURIMI</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">SURIMI SUSHI</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price" value="49.00">$49.00</data>
+
+                  <del class="del">$69.00</del>
+
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card all maki">
+
+                <div class="card-banner">
+                  <img src="./asset/image/avocado.png" width="300" height="300" loading="lazy"
+                    alt="AVOCADO" class="w-200">
+
+                  <div class="badge">-15%</div>
+
+                  <button class="btn food-menu-btn">Order Now</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">AVOCADO</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">AVOCADO SUSHI</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price" value="49.00">$49.00</data>
+
+                  <del class="del">$69.00</del>
+
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card all maki">
+
+                <div class="card-banner">
+                  <img src="./asset/image/crab.png" width="300" height="300" loading="lazy"
+                    alt="crab" class="w-200">
+
+                  <div class="badge">-15%</div>
+
+                  <button class="btn food-menu-btn">Order Now</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">CRAB</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">CRAB SUSHI</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price" value="49.00">$49.00</data>
+
+                  <del class="del">$69.00</del>
+
+                </div>
+              </div>
+            </li>
+
+        <li>
+              <div class="food-menu-card all maki">
+
+                <div class="card-banner">
+                  <img src="./asset/image/anguille.png" width="300" height="300" loading="lazy"
+                    alt="ANGUILLE" class="w-200">
+
+                  <div class="badge">-15%</div>
+
+                  <button class="btn food-menu-btn">Order Now</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">ANGUILLE</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">ANGUILLE SUSHI</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price" value="49.00">$49.00</data>
+
+                  <del class="del">$69.00</del>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+
+        </div>
+      </section>
+
+
+      <!-- footer -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="footer-brand">
+
+        <p class="logo2">ORDER NOW !!</p>
+      
+      </div>
+
+      <div class="container">
+
+
+        <ul class="footer-list">
+          <br>  
+
+          <li>
+            <p class="footer-list-title">Contact Info</p>
+          </li>
+
+          <li>
+            <p class="footer-list-item">+1 (062) 109-9222</p>
+          </li>
+
+          <li>
+            <p class="footer-list-item">Info@YourGmail24.com</p>
+          </li>
+
+          <li>
+            <address class="footer-list-item">153 Williamson Plaza, Maggieberg, MT 09514</address>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+          <br>
+
+          <li>
+            <p class="footer-list-title">Opening Hours</p>
+          </li>
+
+          <li>
+            <p class="footer-list-item">Monday-Friday: 08:00-22:00</p>
+          </li>
+
+          <li>
+            <p class="footer-list-item">Tuesday 4PM: Till Mid Night</p>
+          </li>
+
+          <li>
+            <p class="footer-list-item">Saturday: 10:00-16:00</p>
+          </li>
+
+        </ul>
+
+        <div class="footer-brand">
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright-text">
+          &copy; 2022 <a href="#" class="copyright-link">codewithsadee</a> All Rights Reserved.
+        </p>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+      <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+  <script src="./assets/js/cart.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
