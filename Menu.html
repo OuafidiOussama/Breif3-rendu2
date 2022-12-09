@@ -27,6 +27,8 @@
   -->
   <link rel="preload" as="image" href="./asset/image/Background.jfif">
 
+
+
 </head>
 
 <body id="top">
@@ -68,19 +70,36 @@
               <span class="line bottom"></span>
             </button>
           </div>
-          
 
         </ul>
 
         
-      </div>
       </nav>
 
       
       
     </div>
+          <button class="btn cart btn-hover" id="cart">Cart</button>
+
     <div class="cart-box">
-      <button class="btn btn-hover" id="cart">Cart</button>
+      <div class="whole-cart-window hide">
+        <h2 id="your-cart">Your Cart</h2>
+        <div class="cart-wrapper">
+        
+
+        </div>
+        <div class="total">Total: $0.00</div>
+        <a href="./Menu.html"><div class="checkout"><button class="btn btn-hover">Checkout</button></div></a>
+      </div>
+    </div>
+    </div>
+    
+  </header>
+
+
+  <!-- <button class="btn cart btn-hover" id="cart">Cart</button>
+
+    <div class="cart-box">
       <div class="whole-cart-window hide">
         <h2 id="your-cart">Your Cart</h2>
         <div class="cart-wrapper">
@@ -89,12 +108,8 @@
         </div>
         <div class="total">Total: $0.00</div>
         <div class="checkout"><button class="btn btn-hover">Checkout</button></div>
-        <div class="view-cart"><button class="btn btn-hover">View Cart</button></div>
       </div>
-    </div>
-    </div>
-    
-  </header>
+    </div> -->
   
 
     <!-- 
@@ -104,7 +119,7 @@
       <section class="section food-menu" >
         <div class="container">
 
-          <p class="section-subtitle">Menu</p>
+          <p class="section-subtitle" id="menu">Menu</p>
 
           <h2 class="h2 section-title">
             Our Delicious <span id="span">Foods</span>
@@ -117,31 +132,31 @@
           <ul class="fiter-list">
 
             <li>
-              <a href="./Menu.html"><button class="filter-btn  active" data-filter=".all">All</button></a>
+              <a ><button class="filter-btn active" id="all">All</button></a>
             </li>
 
             <li>
-              <a href="./salades.html"><button class="filter-btn " data-filter=".salades">Salades</button></a>
+              <a ><button class="filter-btn" id="salades">Salades</button></a>
             </li>
 
             <li>
-              <a href="./noodle.html"><button class="filter-btn noodles" data-filter=".noodles">Noodles</button></a>
+              <a><button class="filter-btn" id="noodles">Noodles</button></a>
             </li>
 
             <li>
-              <a href="./plates.html"><button class="filter-btn plates" data-filter=".plates">Plates</button></a>
+              <a ><button class="filter-btn" id="plates">Plates</button></a>
             </li>
 
             <li>
-              <a href="./maki.html"><button class="filter-btn maki" data-filter=".maki">Maki</button></a>
+              <a><button class="filter-btn" id="maki">Maki</button></a>
             </li>
 
           </ul>
 
           <ul class="food-menu-list">
-
+            
             <li>
-              <div class="food-menu-card all salades">
+              <div class="food-menu-card all salades" data-id="umi">
 
                 <div class="card-banner">
                   <img src="./asset/image/umi.png" width="300" height="300" loading="lazy"
@@ -179,7 +194,7 @@
             </li>
 
             <li>
-              <div class="food-menu-card all salades">
+              <div class="food-menu-card all salades"  data-id="kani">
 
                 <div class="card-banner">
                   <img src="./asset/image/kani.png" width="300" height="300" loading="lazy"
@@ -217,7 +232,7 @@
             </li>
 
             <li>
-              <div class="food-menu-card all salades">
+              <div class="food-menu-card all salades" data-id="tori">
 
                 <div class="card-banner">
                   <img src="./asset/image/tori.png" width="300" height="300" loading="lazy"
@@ -253,9 +268,10 @@
                 </div>
               </div>
             </li>
-
+            
+            
             <li>
-              <div class="food-menu-card all noodles">
+              <div class="food-menu-card all noodles"  data-id="ramen">
 
                 <div class="card-banner">
                   <img src="./asset/image/Ramen.png" width="300" height="300" loading="lazy"
@@ -294,7 +310,7 @@
             </li>
 
             <li>
-              <div class="food-menu-card all noodles">
+              <div class="food-menu-card all noodles" data-id="udon">
 
                 <div class="card-banner">
                   <img src="./asset/image/udon.png" width="300" height="300" loading="lazy"
@@ -333,7 +349,7 @@
             </li>
 
             <li>
-              <div class="food-menu-card all noodles">
+              <div class="food-menu-card all noodles" data-id="soba">
 
                 <div class="card-banner">
                   <img src="./asset/image/Soba.png" width="300" height="300" loading="lazy"
@@ -370,9 +386,9 @@
 
               </div>
             </li>
-
+          
             <li>
-              <div class="food-menu-card all plates">
+              <div class="food-menu-card all plates" data-id="sashimi">
 
                 <div class="card-banner">
                   <img src="./asset/image/Sashimi.png" width="300" height="300" loading="lazy"
@@ -410,7 +426,7 @@
             </li>
 
             <li>
-              <div class="food-menu-card all plates">
+              <div class="food-menu-card all plates" data-id="tartare">
 
                 <div class="card-banner">
                   <img src="./asset/image/tartare.png" width="300" height="300" loading="lazy"
@@ -449,7 +465,7 @@
             </li>
 
             <li>
-              <div class="food-menu-card all plates">
+              <div class="food-menu-card all plates" data-id="carpaccio">
 
                 <div class="card-banner">
                   <img src="./asset/image/Carpaccio.png" width="300" height="300" loading="lazy"
@@ -486,9 +502,9 @@
 
               </div>
             </li>
-
+          
             <li>
-              <div class="food-menu-card all maki">
+              <div class="food-menu-card all maki" data-id="saumon">
 
                 <div class="card-banner">
                   <img src="./asset/image/saumon.png" width="300" height="300" loading="lazy"
@@ -527,7 +543,7 @@
             </li>
 
             <li>
-              <div class="food-menu-card all maki">
+              <div class="food-menu-card all maki" data-id="crevette">
 
                 <div class="card-banner">
                   <img src="./asset/image/crevette.png" width="300" height="300" loading="lazy"
@@ -566,7 +582,7 @@
             </li>
 
             <li>
-              <div class="food-menu-card all maki">
+              <div class="food-menu-card all maki" data-id="surimi">
 
                 <div class="card-banner">
                   <img src="./asset/image/surimi.png" width="300" height="300" loading="lazy"
@@ -604,7 +620,7 @@
             </li>
 
             <li>
-              <div class="food-menu-card all maki">
+              <div class="food-menu-card all maki" data-id="avocado">
 
                 <div class="card-banner">
                   <img src="./asset/image/avocado.png" width="300" height="300" loading="lazy"
@@ -642,7 +658,7 @@
             </li>
 
             <li>
-              <div class="food-menu-card all maki">
+              <div class="food-menu-card all maki" data-id="crab">
 
                 <div class="card-banner">
                   <img src="./asset/image/crab.png" width="300" height="300" loading="lazy"
@@ -680,7 +696,7 @@
             </li>
 
         <li>
-              <div class="food-menu-card all maki">
+              <div class="food-menu-card all maki" data-id="anguille">
 
                 <div class="card-banner">
                   <img src="./asset/image/anguille.png" width="300" height="300" loading="lazy"
@@ -718,6 +734,7 @@
             </li>
 
           </ul>
+        
 
 
         </div>
@@ -779,7 +796,6 @@
           </li>
 
         </ul>
-
         <div class="footer-brand">
 
           <ul class="social-list">
@@ -823,23 +839,13 @@
       </div>
     </div>
 
+    <!-- <div class="popup">
+      <img src="./asset/Icon/tutorial-preview-large.png" alt="">
+      <h2>thank you for your purchase</h2>
+      <button class="btn back-to-menu">back to shop</button>
+    </div> -->
+
   </footer>
-
-
-
-
-
-
-
-
-
-
-
-      <!-- 
-    - custom js link
-  -->
-  <script src="./assets/js/script.js" defer></script>
-  <script src="./assets/js/cart.js"></script>
 
   <!-- 
     - ionicon link
@@ -847,6 +853,11 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+          <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script rel="preload" src="./assets/js/cart.js"></script>
 </body>
 
 </html>

@@ -10,6 +10,7 @@ class CartItem{
 class LocalCart{
     static key  = 'cartItems'
 
+    //method to call all the elements in the local storage
     static getLocalCartItems(){
         let cartMap = new Map()
         const cart= localStorage.getItem(LocalCart.key)
@@ -18,6 +19,8 @@ class LocalCart{
         }
         return new Map(Object.entries(JSON.parse(cart)))
     }
+
+    //method that adds to the local storage
     static addItemToLocalCart(id, item){
         let cart = LocalCart.getLocalCartItems(id, item)
         if(cart.has(id)){
@@ -25,10 +28,14 @@ class LocalCart{
             mapItem.quantity += 1
             cart.set(id, mapItem)
         }
-        else cart.set(id, item)
+        else {
+            cart.set(id, item)
+        }
         localStorage.setItem(LocalCart.key, JSON.stringify(Object.fromEntries(cart)))
         updateCartUI()
     }
+
+    //method that deletes objects (items) from the cart 
     static removeItemFromCart(id){
         let cart = LocalCart.getLocalCartItems()
         if(cart.has(id)){
@@ -45,7 +52,6 @@ class LocalCart{
             localStorage.clear()
         }
         else {
-
             localStorage.setItem(LocalCart.key, JSON.stringify(Object.fromEntries(cart)))
             updateCartUI()
         }
@@ -57,8 +63,10 @@ class LocalCart{
 
 const cartBtn = document.querySelector('#cart')
 const wholeCartWindow = document.querySelector('.whole-cart-window')
-const addToCartBtns = document.querySelectorAll('.food-menu-btn')
-addToCartBtns.forEach( (btn) =>{
+
+//identify add to cart btns
+const orderNowBtns = document.querySelectorAll('.food-menu-btn')
+orderNowBtns.forEach( (btn) =>{
     btn.addEventListener('click', addItemFunction)
 })
 
@@ -72,6 +80,8 @@ function addItemFunction(e){
     LocalCart.addItemToLocalCart(id, item)
 } 
 
+
+//toggle cart menu
 cartBtn.addEventListener('click',()=> {
     // if(wholeCartWindow.classList.contains('hide'))
     // wholeCartWindow.classList.remove('hide')
@@ -82,6 +92,19 @@ cartBtn.addEventListener('click',()=> {
 //     wholeCartWindow.classList.add('hide')
 // })
 
+//back to menu
+// const back=document.querySelector('.back-to-menu')
+// back.addEventListener('click',()=>{
+//     localStorage.clear()
+// })
+
+
+const checkout = document.querySelector('.checkout')
+
+checkout.addEventListener('click',()=>{
+    alert("thank you for your purshace")
+    localStorage.clear()
+})
 
 function updateCartUI(){
     const cartWrapper = document.querySelector('.cart-wrapper')
@@ -122,4 +145,58 @@ function updateCartUI(){
     
 
 }
-document.addEventListener('DOMContentLoaded', ()=>{updateCartUI})
+
+
+
+
+// document.addEventListener('DOMContentLoaded', ()=>{updateCartUI})
+
+
+// const all=document.querySelector('.all')
+// const salades=document.querySelector('.salades')
+// const noodles=document.querySelector('.noodles')
+// const plates=document.querySelector('.plates')
+// const maki=document.querySelector('.maki')
+// const allbtn=document.getElementById('all')
+// const saladebtn=document.getElementById('salades')
+// const noodlebtn=document.getElementById('noodles')
+// const platebtn=document.getElementById('plates')
+// const makibtn=document.getElementById('maki')
+
+
+// allbtn.addEventListener('click',function(){
+//     salades.style.display= 'flex'
+//     noodles.style.display= 'flex'
+//     plates.style.display= 'flex'
+//     maki.style.display= 'flex'
+//     console.log('ALL')
+// })
+// saladebtn.addEventListener('click',function(){
+//     salades.style.display= 'flex'
+//     noodles.style.display= 'none'
+//     plates.style.display= 'none'
+//     maki.style.display= 'none'
+//     console.log('SALADES')
+// })
+// noodlebtn.addEventListener('click',function(){
+//     salades.style.display= 'none'
+//     noodles.style.display= 'flex'
+//     plates.style.display= 'none'
+//     maki.style.display= 'none'
+//     console.log('NOONDLEs')
+// })
+// platebtn.addEventListener('click',function(){
+//     salades.style.display= 'none'
+//     noodles.style.display= 'none'
+//     plates.style.display= 'flex'
+//     maki.style.display= 'none'
+//     console.log('PLATES')
+// })
+// makibtn.addEventListener('click',function(){
+//     salades.style.display= 'none'
+//     noodles.style.display= 'none'
+//     plates.style.display= 'none'
+//     maki.style.display= 'flex'
+//     console.log('MAKI')
+// })
+

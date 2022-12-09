@@ -12,26 +12,26 @@ menuToggleBtn.addEventListener("click", function () {
   this.classList.toggle("active");
 });
 
-for (let i = 0; i < navbarLinks.length; i++) {
-  navbarLinks[i].addEventListener("click", function () {
-    navbar.classList.toggle("active");
-    menuToggleBtn.classList.toggle("active");
-  });
-}
-
-
 const header = document.querySelector("[data-header]");
-const backTopBtn = document.querySelector("[data-back-top-btn]");
 
 window.addEventListener("scroll", function () {
   if (window.scrollY >= 100) {
     header.classList.add("active");
-    backTopBtn.classList.add("active");
   } else {
     header.classList.remove("active");
-    backTopBtn.classList.remove("active");
   }
 });
 
+window.addEventListener("resize", (evt)=>{
+  if(evt.target.innerWidth < 500){
+    document.querySelectorAll(".menu").forEach((element)=>{
+      element.classList.add("has-scrollbar");
+    });
+  }else{
+    document.querySelectorAll(".menu").forEach((element)=>{
+      element.classList.remove("has-scrollbar");
+    });
+  }
+});
 
 
